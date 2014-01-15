@@ -1,0 +1,18 @@
+#header
+	%h1
+		Ask a Question
+
+#main_text
+	%p
+		Please feel free to ask us anything...
+
+#question_form
+	%form{action: '/submit', method: 'POST'}
+		%label{for: 'name'} Your Name
+		%input{name: 'name'}
+		%label{for: 'email'} Your Email
+		%input{name: 'email'}
+		%label{for: 'question_text'} Your Question
+		%tetarea{name: 'question_text'}
+		%input{type: 'submit', value: 'Send to Traci and Ben'}
+

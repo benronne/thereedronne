@@ -27,6 +27,16 @@ get '/submit' do
 	haml :submit
 end
 
+post '/submit' do
+	@question = Question.new(name: params['name'], email: params['email'], question_text: params['question_text'], created_at: Time.now)
+	if @question.save
+		flash[:notice] = "Thanks!  We'll get back to you ASAP."
+	else
+		flash[:alert] = "Oops. There was a problem with you question."
+	end
+		redirect "/"
+end
+
 get '/questions' do
 	haml :questions
 end

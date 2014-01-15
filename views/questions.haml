@@ -1,0 +1,10 @@
+#header
+	%h1 Guest Questions
+
+#main_text
+	.questions
+		-questions.each do |question|
+			=question.name
+			=question.email
+			=question.created_at.strftime('%A, %B %e %Y')
+			=question.question_text
