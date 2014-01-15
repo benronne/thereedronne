@@ -1,0 +1,28 @@
+!!!
+
+%html
+	%head
+		%title Traci and Ben's Wedding
+		%meta{name: "description" content: "Traci and Ben's Wedding.  June 27th, 2014.  Canton, OH."}
+		%meta{name: "viewport", content: "initial-scale=1"}
+		%link{rel: "stylesheet", href: "http://fonts.googleapis.com/css?family=Rock+Salt|Amatic+SC", type: "text/css"}
+		%link{rel: "stylesheet", href: "/stylesheet.css", type: "text/css"}
+	%body
+		-if flash[:notice]
+			.notice=flash[:notice]
+		-if flash[:alert]
+			.alert=flash[:alert]
+		#navigation
+			%ul.nav
+				%li.nav
+					%a{href: '/'} Home
+				%li.nav
+					%a{href: '/accommodations'} Accommodations
+				%li.nav
+					%a{href: '/activies'} Activities
+				%li.nav
+					%a{href: '/submit'} Ask a Question
+		=yield
+
+		
+	
