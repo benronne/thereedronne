@@ -56,6 +56,15 @@ body {
 	text-align: center;
 }
 
+ul.nav {
+	list-style-type: none;
+}
+
+li.nav {
+	display: inline-block;
+	margin: 10px 25px 10px 25px;
+}
+
 #header {
 	width: 100%;
 	margin-bottom: 40px;
@@ -79,6 +88,48 @@ body {
 	text-align: center;
 	font-weight: bold;
 	list-style-type: none
+}
+
+.new_question label {
+	width: 100%;
+	margin: 10px 0px;
+	font-size: 18pt;
+	display: block;
+}
+
+.new_question input {
+	width: 100px;
+	margin: 10px 0px 20px 0px;
+	display: block;
+}
+
+.new_question textarea {
+	width: 100%;
+	height: 100px;
+}
+.new_question input[type="submit"] {
+	width: 150px;
+	margin: 5px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:visited {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #000000;
+}
+
+a:active{
+	text-decoration: none;
+	color: #000000;
 }
 
 @media (max-width: 480px) {

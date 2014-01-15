@@ -11,6 +11,10 @@ configure (:development) { set :database, 'sqlite3:///thereedronne_db.sqlite3'}
 
 require './models'
 
+enable :sessions
+use Rack::Flash, :sweep => true
+set :sessions => true
+
 get '/' do
 	haml :index
 end
@@ -19,8 +23,8 @@ get '/accommodations' do
 	haml :accommodations
 end
 
-get '/activies' do
-	haml :activies
+get '/activities' do
+	haml :activities
 end
 
 get '/submit' do
@@ -38,5 +42,6 @@ post '/submit' do
 end
 
 get '/questions' do
+	@questions = Question.all.reverse
 	haml :questions
 end
