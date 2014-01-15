@@ -7,7 +7,7 @@ require 'rake'
 require 'chronic'
 require 'rack-flash'
 
-configure (:development) { set :database, 'sqlite3:///thereedronne_db.sqlite3'}
+configure(:development) { set :database, 'sqlite3:///thereedronne_db.sqlite3'}
 
 require './models'
 
